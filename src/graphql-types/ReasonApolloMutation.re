@@ -72,7 +72,7 @@ module MutationFactory = (Config: Config) => {
       (
         ~variables: option(Js.Json.t)=?,
         ~onError: option(unit => unit)=?,
-        ~onCompleted: option(unit => unit)=?,
+        ~onCompleted: option(Js.Json.t => unit)=?,
         children: (apolloMutation, renderPropObj) => ReasonReact.reactElement,
       ) =>
     ReasonReact.wrapJsForReason(
